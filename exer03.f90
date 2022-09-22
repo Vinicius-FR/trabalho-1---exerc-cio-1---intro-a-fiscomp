@@ -21,7 +21,7 @@ program exer03
 
                     if (mod(n, i) == 0) then   ! Se o resto da divisão n / i for 0, n possui outros divisores, logo não é primo
                         primo = .false.
-                        i = n   ! Para encerrar o primeiro loop
+                        exit   ! Para encerrar o primeiro loop ao achar o primeiro divisor de n diferente de 1 e n
                     else
                         i = i + 2   ! Testando o próximo ímpar, pois n é ímpar
                     end if
@@ -37,6 +37,6 @@ program exer03
         end do
     end if
 
-    close(1)  ! Fechano o arquivo
+    close(1)  ! Fechando o arquivo
 
 end program exer03
