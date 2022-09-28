@@ -63,36 +63,28 @@ PROGRAM exer04
   
   close(1)
   ! area 1
-  area = cross(a,b) / 2
+  area = cross(a-b, a-c) / 2
   areas(1) = mag(area)
   sum = sum + mag(area)
   ! area 2
-  area = cross(a,c) / 2
+  area = cross(a-b, a-d) / 2
   areas(2) = mag(area)
   sum = sum + mag(area)
   ! area 3
-  area = cross(a,d) / 2
+  area = cross(a-c, a-d) / 2
   areas(3) = mag(area)
   sum = sum + mag(area)
   ! area 4
-  area = cross(b,c) / 2
+  area = cross(b-c, b-d) / 2
   areas(4) = mag(area)
   sum = sum + mag(area)
-  ! area 5
-  area = cross(b,d) / 2
-  areas(5) = mag(area)
-  sum = sum + mag(area)
-  ! area 6
-  area = cross(c,d) / 2
-  areas(6) = mag(area)
-  sum = sum + mag(area)
 
-  vol = ABS(DOT_PRODUCT(b, area) / 3) ! calculando o volume com produto misto (escalar e vetorial)
+  vol = ABS(DOT_PRODUCT(a-b, area) / 3) ! calculando o volume com produto misto (escalar e vetorial)
   
   open(2, file = 'tetra_out.dat', status='replace') ! cria arquivo de saída
     write(2,*) vol
     write(2,*) sum
-    write(2,*) sort(areas, 6)
+    write(2,*) sort(areas, 4) ! lista ordenada
   close(2)
 
 END PROGRAM exer04
