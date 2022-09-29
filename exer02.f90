@@ -5,7 +5,6 @@ subroutine seno_s(x, list) ! subrotina para calcular seno com precisão simples
     REAL(4), DIMENSION(2), INTENT(OUT) :: list
     INTEGER :: fact, i, n = 1 ! Parâmetros para o cálculo do fatorial
     REAL(4) :: termo, seno = 0e0, erro ! série do seno começando em 0 e temo a ser alterado e somado a cada loop
-    real(4), dimension(2) :: list_s
 
     do
         fact = 1
@@ -25,7 +24,7 @@ subroutine seno_s(x, list) ! subrotina para calcular seno com precisão simples
 
     erro = termo / seno
     list(1) = erro
-    list(2) = seno
+    list(2) = seno ! retorna o seno calculado caso queira
 
     n = 1 ! reiniciando os parâmetros para o próximo loop
     seno = 0e0
@@ -78,44 +77,44 @@ program exer02
     ! x = 0.1:
 
     call seno_s(x, list_s)
-    print *, list_s(1), list_s(2)
+    print *, x, list_s(1)
     
     ! x = y = 0.2:
 
     call seno_s(y, list_s)
-    print *, list_s(1), list_s(2)
+    print *, y, list_s(1)
 
     ! x = z = 0.3:
 
     call seno_s(z, list_s)
-    print *, list_s(1), list_s(2)
+    print *, z, list_s(1)
 
     ! x = w = 0.4:
 
     call seno_s(w, list_s)
-    print *, list_s(1), list_s(2)
+    print *, w, list_s(1)
 
     print *, "PRECISÃO DUPLA"
 
     ! x = a = 0.1:
 
     call seno_d(a, list_d)
-    print *, list_d(1), list_d(2)
+    print *, a, list_d(1)
 
     ! x = b = 0.2:
 
     call seno_d(b, list_d)
-    print *, list_d(1), list_d(2)
+    print *, b, list_d(1)
 
     ! x = c = 0.3:
 
     call seno_d(c, list_d)
-    print *, list_d(1), list_d(2)
+    print *, c, list_d(1)
 
     ! x = d = 0.4:
 
     call seno_d(d, list_d)
-    print *, list_d(1), list_d(2)
+    print *, d, list_d(1)
 
     print *, 'Conclusão:'
     print *, 'Como nota-se uma excelente precisão dos valores obtidos,'
