@@ -50,7 +50,7 @@ PROGRAM exer04
 
   REAL, DIMENSION(3) :: a, b, c, d ! vetores a serem lidos
   REAL, DIMENSION(3) :: area ! vetor área (produto vetorial)
-  REAL, DIMENSION(6) :: areas ! array de áreas calculadas
+  REAL, DIMENSION(4) :: areas ! array de áreas calculadas
   INTEGER :: i
   REAL :: vol, sum = 0 ! volume e soma de áreas
 

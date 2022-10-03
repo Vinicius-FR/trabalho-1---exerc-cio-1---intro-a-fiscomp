@@ -1,13 +1,10 @@
 program exer01
     IMPLICIT NONE
-    ! Esse é um exemplo de comentario
-    real(4) :: a = 1e0
-    real(4) :: s
-    integer :: i = 0
-    real(8) :: b = 1d0
-    real(8) :: d
-    real(16) :: c = 1_16
-    real(16) :: q
+    ! Criando os parâmetros auxiliares para os loops de cada precisão
+    integer :: i = 0, j = 0, k = 0 ! Número de bits
+    real(4) :: a = 1e0, s
+    real(8) :: b = 1d0, d
+    real(16) :: c = 1_16, q
 
 
     print *, 'PRECISÃO SIMPLES'
@@ -20,10 +17,6 @@ program exer01
         i = i + 1   
     end do
 
-    print *, i
-
-    i = 0
-
     print *, 'PRECISÃO DUPLA'
 
     do
@@ -31,12 +24,8 @@ program exer01
         b = b / 2
         print *, b, d
         if (d == 1) exit
-        i = i + 1
+        j = j + 1
     end do
-
-    print *, i
-
-    i = 0
 
     print *, 'PRECISÃO QUÁDRUPLA'
 
@@ -45,9 +34,11 @@ program exer01
         c = c / 2
         print *, c, q
         if (q == 1) exit
-        i = i + 1
+        k = k + 1
     end do
 
-    print *, i
+    print *, i, a
+    print *, j, b
+    print *, k, c
 
   end program exer01
