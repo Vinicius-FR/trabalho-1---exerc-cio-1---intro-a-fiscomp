@@ -53,8 +53,8 @@ program exer05
    do
    y = matmul(M, x)
 
-      if(abs(lambda - dot(x, y, 3) / dot(x, x, 3)) > erro) then
-         lambda = dot(x, y, 3) / dot(x, x, 3)
+      if(abs(lambda - dot(x, y, n) / dot(x, x, n)) > erro) then
+         lambda = dot(x, y, n) / dot(x, x, n)
          x = y
       else
          exit

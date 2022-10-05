@@ -117,10 +117,11 @@ program exer02
     print *, d, list_d(1)
 
     print *, 'Conclusão:'
-    print *, 'Como nota-se uma excelente precisão dos valores obtidos,'
-    print *, 'pode-se dizer que calcular funções trigonométricas por meio de séries é válido.'
-    print *, 'Porém, para valores maiores de x, a imprecisão do limite computacional pode'
-    print *, 'ficar cada vez mais pronunciada, além de não funcionar, por exemplo, para a'
-    print *, 'função tangente para todo x por só poder ser escrita na forma de série para um certo intervalo.'
+    print *, 'Como nota-se uma excelente precisão dos valores obtidos, pode-se dizer que'
+    print *, 'calcular funções trigonométricas por meio de séries é válido para valores em torno do range analisado,'
+    print *, 'já que o erro relativo permaneceu estável em módulo.'
+    print *, 'Porém, para valores muito pequenos de x, a imprecisão do limite computacional pode'
+    print *, 'se tornar da mesma ordem de grandeza do próprio seno, além de não funcionar, por exemplo, para'
+    print *, 'x >= 1, em que a série dada diverge, tendo que alterar a série toda vez que ultrapassarmos um limite de x.'
 
   end program exer02
