@@ -37,8 +37,8 @@ program exer01
         k = k + 1
     end do
 
-    print *, i, a
-    print *, j, b
-    print *, k, c
+    print *, i, 2*a ! para printar o número de bits e o último termo que faz diferença na soma
+    print *, j, 2*b
+    print *, k, 2*c
 
   end program exer01
